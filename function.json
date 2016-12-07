@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "path": "app-uploads/{name}",
+      "type": "blobTrigger",
+      "name": "image",
+      "direction": "in",
+      "connection": "tagur_STORAGE"
+    },
+    {
+      "name": "container",
+      "type": "blob",
+      "path": "app-uploads",
+      "connection": "tagur_STORAGE",
+      "direction": "in"
+    },
+    {
+      "name": "blob",
+      "type": "blob",
+      "path": "app-uploads/{name}",
+      "connection": "tagur_STORAGE",
+      "direction": "inOut"
+    }
+  ],
+  "disabled": false
+}
